@@ -1,8 +1,8 @@
 import React from 'react';
-import {Container, Jumbotron, Card, Nav } from 'react-bootstrap/';
+import { Tabs, Tab, Container, Row, Jumbotron, Card, Col, Button, Nav } from 'react-bootstrap/';
 import cookies from '../cookiestore';
 
-class Home extends React.Component {
+class Doors extends React.Component {
 
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ class Home extends React.Component {
       <Container>
         <br />
         <Jumbotron>
-          <h1>Home page</h1>
+          <h1>Manage Doors</h1>
           {cookies.get("session")}
         </Jumbotron>
         <Card>
@@ -25,11 +25,7 @@ class Home extends React.Component {
             What would you like to do?
             </Card.Header>
           <Card.Body>
-            <Nav className="flex-column">
-              <Nav.Link href="/hierarchy">View security door entry hierarchy</Nav.Link>
-              <Nav.Link href="/doors">Manage Doors</Nav.Link>
-              <Nav.Link href="/logout">Logout</Nav.Link>
-            </Nav>
+
           </Card.Body>
         </Card>
       </Container>
@@ -37,4 +33,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Doors;

@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import cookies from './cookiestore';
 import Login from './views/Login';
 import Home from './views/Home';
+import Hierarchy from './views/Hierarchy';
+import Doors from './views/Doors';
 
 class App extends React.Component {
 
@@ -23,6 +25,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/login" exact component={Login} />
+          <Route path="/hierarchy" exact component={Hierarchy} />
+          <Route path="/doors" exact component={Doors} />
           <Route path="/logout" component={Logout} />
         </Switch>
       </Router>
