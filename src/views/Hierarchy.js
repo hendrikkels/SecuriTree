@@ -43,7 +43,7 @@ class Hierarchy extends React.Component {
     const json = await response.json();
     const data = json[0];
     data.doors = await this.getDoors(data.id);
-
+    this.getRules();
     for (var index in data.child_area_ids) {
       data.child_area_ids[index] = await this.oeloeloe(data.child_area_ids[index]);
     }
@@ -73,6 +73,16 @@ class Hierarchy extends React.Component {
     var data = json;
     // console.log(data);
     return data;
+  }
+
+  async getRules(node) {
+    let query = "http://localhost:5000/access_rules/";
+    // console.log(query);
+    const response = await fetch(query);
+    const json = await response.json();
+    var data = json;
+    console.log(data);
+    // return data;
   }
 
   printTree(tree) {

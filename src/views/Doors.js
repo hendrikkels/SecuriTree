@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Tab, Container, Row, Jumbotron, Card, Col, Button, Nav } from 'react-bootstrap/';
+import { Container, Jumbotron, Card } from 'react-bootstrap/';
 import cookies from '../cookiestore';
 
 class Doors extends React.Component {
