@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Jumbotron, Card, Nav } from 'react-bootstrap/';
+import {Container, Jumbotron, Card, Nav, Breadcrumb } from 'react-bootstrap/';
 import cookies from '../cookiestore';
 
 class Home extends React.Component {
@@ -17,14 +17,14 @@ class Home extends React.Component {
       <Container>
         <br />
         <Jumbotron>
-          <h1>Home page</h1>
-          {cookies.get("session")}
+          <h1>Welcome, {cookies.get("session")}!</h1>
         </Jumbotron>
-        <Card>
-          <Card.Header>
-            What would you like to do?
-            </Card.Header>
+        <Breadcrumb>
+          <Breadcrumb.Item active href="/">Home</Breadcrumb.Item>
+        </Breadcrumb>
+        <Card className="border-0 bg-light">
           <Card.Body>
+            <h4>What would you like to do?</h4>
             <Nav className="flex-column">
               <Nav.Link href="/hierarchy">View security door entry hierarchy</Nav.Link>
               <Nav.Link href="/doors">Manage Doors</Nav.Link>

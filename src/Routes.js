@@ -5,6 +5,8 @@ import Login from './views/Login';
 import Home from './views/Home';
 import Hierarchy from './views/Hierarchy';
 import Doors from './views/Doors';
+import Unlock from './views/Unlock';
+import Lock from './views/Lock';
 
 class App extends React.Component {
 
@@ -27,6 +29,8 @@ class App extends React.Component {
           <Route path="/login" exact component={Login} />
           <Route path="/hierarchy" exact component={Hierarchy} />
           <Route path="/doors" exact component={Doors} />
+          <Route path="/Unlock" exact component={Unlock} />
+          <Route path="/Lock" exact component={Lock} />
           <Route path="/logout" component={Logout} />
         </Switch>
       </Router>
