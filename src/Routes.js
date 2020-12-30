@@ -16,7 +16,7 @@ class App extends React.Component {
       cookies.remove("session");
       isLoggedIn = false;
     }
-    console.log(isLoggedIn)
+    // console.log(isLoggedIn)
     return (
       <Router>
         { isLoggedIn ? ( 

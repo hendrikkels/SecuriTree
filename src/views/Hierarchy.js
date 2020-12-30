@@ -65,7 +65,7 @@ class Hierarchy extends React.Component {
     for (var index in data.child_area_ids) {
       data.child_area_ids[index] = await this.oeloeloe(data.child_area_ids[index]);
     }
-    console.log(data);
+    // console.log(data);
     this.setState({ tree: data });
     return (data);
   }
@@ -108,12 +108,12 @@ class Hierarchy extends React.Component {
     var data = json;
     var rules = [];
     for (let index in data) {
-      console.log(data[index].doors.includes(node));
+      // console.log(data[index].doors.includes(node));
       if (data[index].doors.includes(node)) {
         rules.push(data[index].name);
       }
     }
-    console.log(rules);
+    // console.log(rules);
     return rules;
   }
 
@@ -126,7 +126,6 @@ class Hierarchy extends React.Component {
       this.printTree(tree.child_area_ids[index]);
     }
     if (typeof tree.child_area_ids === 'undefined' || tree === []) {
-      console.log('poes'); 
       return(null);
     }
     else {

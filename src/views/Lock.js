@@ -36,7 +36,7 @@ class Lock extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     let query = "http://localhost:5000/doors?id=".concat(this.state.id);
-    console.log(query);
+    // console.log(query);
     fetch(query)
     .then(response => response.json()) 
     .then(json => {
@@ -46,7 +46,7 @@ class Lock extends React.Component {
       }
       data.status = "closed";
       // console.log(data);
-      console.log(JSON.stringify(data));
+      // console.log(JSON.stringify(data));
       fetch("http://localhost:5000/doors/".concat(this.state.id), {
         method: "PUT",
         body: JSON.stringify(data),

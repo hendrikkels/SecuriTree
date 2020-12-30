@@ -28,13 +28,13 @@ export default class Login extends Component {
     event.preventDefault();
 
     let query = "http://localhost:5000/registered_users?username=".concat(this.state.username).concat("&password=").concat(this.state.password)
-    console.log(query);
+    // console.log(query);
     fetch(query)
       .then(response => response.json())
       .catch(error => console.error('Error:', error))
       .then(response => {
-        console.log('Success:', response);
-        console.log(response.length);
+        // console.log('Success:', response);
+        // console.log(response.length);
         if (response.length === 0) {
           alert("Incorrect credentials, please try again");
         }
